@@ -8,8 +8,12 @@ const NavBar = () => {
 
   return (
     <Header
-      background="brand"
+      background="dark-1"
       height="60px"
+      border={{
+        color: "brand",
+        side: "bottom",
+      }}
     >
       <Button
         a11yTitle="Menu"

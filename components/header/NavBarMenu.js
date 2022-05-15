@@ -14,12 +14,12 @@ const MenuButton = ({ label, href }) => {
           justify="center"
           width="small"
           border={{
-            color: "dark-6",
+            color: "brand",
             size: "1px",
             side: "bottom"
           }}
         >
-          <Text color="brand">{label}</Text>
+          <Text>{label}</Text>
         </Box>
       </Button>
     </Box>
@@ -31,7 +31,7 @@ const NavBarMenu = ({ setShowMenu }) => {
     <Layer
       full="vertical"
       position="start"
-      background="light-3"
+      background="dark-1"
       responsive={false}
       onClickOutside={() => setShowMenu(false)}
     >

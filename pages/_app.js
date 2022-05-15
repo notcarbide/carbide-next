@@ -1,13 +1,17 @@
 import App from 'next/app'
-import { Grommet, grommet as grommetTheme,
-         Main } from 'grommet'
+import { Grommet, Main } from 'grommet'
+import carbide from '../theme/carbide'
 import NavBar from '../components/header/NavBar'
 
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Grommet theme={grommetTheme} full="min">
+      <Grommet
+        theme={carbide}
+        themeMode="dark"
+        full="min"
+      >
         <Main>
           <NavBar />
           <Component {...pageProps} />
