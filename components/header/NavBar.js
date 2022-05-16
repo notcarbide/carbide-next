@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button, Header } from 'grommet'
 import { Menu } from 'grommet-icons'
 import NavBarMenu from './NavBarMenu'
+import LogoIcon from '../../assets/LogoIcon'
 
 const NavBar = () => {
   const [showmenu, setShowMenu] = useState(false)
@@ -20,6 +21,7 @@ const NavBar = () => {
         icon={<Menu />}
         onClick={() => setShowMenu(true)}
       />
+      <LogoIcon size="large" />
       {showmenu && (
         <NavBarMenu setShowMenu={setShowMenu} />
       )}
