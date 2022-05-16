@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Button, Header } from 'grommet'
-import { Menu } from 'grommet-icons'
+import { Menu, Music } from 'grommet-icons'
+import MusicLayer from './MusicLayer'
 import NavBarMenu from './NavBarMenu'
 import LogoIcon from '../../assets/LogoIcon'
 
 const NavBar = () => {
   const [showmenu, setShowMenu] = useState(false)
+  const [showmusic, setShowMusic] = useState(false)
 
   return (
     <Header
@@ -22,8 +24,18 @@ const NavBar = () => {
         onClick={() => setShowMenu(true)}
       />
       <LogoIcon size="large" />
+      {!showmenu && (
+        <Button
+          a11yTitle="Open Music Players"
+          icon={<Music />}
+          onClick={() => setShowMusic(true)}
+        />
+      )}
       {showmenu && (
         <NavBarMenu setShowMenu={setShowMenu} />
+      )}
+      {showmusic && (
+        <MusicLayer setShowMusic={setShowMusic} />
       )}
     </Header>
   )
