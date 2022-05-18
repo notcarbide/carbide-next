@@ -4,10 +4,10 @@ import { Menu, Music } from 'grommet-icons'
 import MusicLayer from './MusicLayer'
 import NavBarMenu from './NavBarMenu'
 import LogoIcon from '../../assets/LogoIcon'
+import { useHeaderContext } from '../../context/header'
 
 const NavBar = () => {
-  const [showmenu, setShowMenu] = useState(false)
-  const [showmusic, setShowMusic] = useState(false)
+  const header = useHeaderContext()
 
   return (
     <Header
@@ -21,21 +21,21 @@ const NavBar = () => {
       <Button
         a11yTitle="Menu"
         icon={<Menu />}
-        onClick={() => setShowMenu(true)}
+        onClick={() => header.setShowMenu(true)}
       />
       <LogoIcon size="large" />
-      {!showmenu && (
+      {!header.state.showmenu && (
         <Button
           a11yTitle="Open Music Players"
           icon={<Music />}
-          onClick={() => setShowMusic(true)}
+          onClick={() => header.setShowMusic(true)}
         />
       )}
-      {showmenu && (
-        <NavBarMenu setShowMenu={setShowMenu} />
+      {header.state.showmenu && (
+        <NavBarMenu />
       )}
-      {showmusic && (
-        <MusicLayer setShowMusic={setShowMusic} />
+      {header.state.showmusic && (
+        <MusicLayer />
       )}
     </Header>
   )

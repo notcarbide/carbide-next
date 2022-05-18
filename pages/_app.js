@@ -3,6 +3,7 @@ import { Grommet, Main } from 'grommet'
 import carbide from '../theme/carbide'
 import NavBar from '../components/header/NavBar'
 import PageFooter from '../components/footer/PageFooter'
+import { HeaderProvider } from '../context/header'
 
 export default class MyApp extends App {
   render() {
@@ -14,9 +15,11 @@ export default class MyApp extends App {
         full="min"
       >
         <Main>
-          <NavBar />
-          <Component {...pageProps} />
-          <PageFooter />
+          <HeaderProvider>
+            <NavBar />
+            <Component {...pageProps} />
+            <PageFooter />
+          </HeaderProvider>
         </Main>
       </Grommet>
     )

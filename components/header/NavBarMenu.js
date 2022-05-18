@@ -1,5 +1,6 @@
 import { Box, Button, Layer, SideBar,
          Text } from 'grommet'
+import { useHeaderContext } from '../../context/header'
 
 const MenuButton = ({ label, href }) => {
   return (
@@ -26,14 +27,16 @@ const MenuButton = ({ label, href }) => {
   )
 }
 
-const NavBarMenu = ({ setShowMenu }) => {
+const NavBarMenu = () => {
+  const header = useHeaderContext()
+
   return (
     <Layer
       full="vertical"
       position="start"
       background="dark-1"
       responsive={false}
-      onClickOutside={() => setShowMenu(false)}
+      onClickOutside={() => header.setShowMenu(false)}
     >
       <MenuButton label="Home" href="/" />
       <MenuButton label="About" />

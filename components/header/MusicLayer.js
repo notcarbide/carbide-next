@@ -1,17 +1,19 @@
 import { Box, Button, Layer, Text } from 'grommet'
 import { Close } from 'grommet-icons'
+import { useHeaderContext } from '../../context/header'
 
-const MusicLayer = ({ setShowMusic }) => {
+const MusicLayer = () => {
+  const header = useHeaderContext()
 
   return (
     <Layer
-      onClickOutside={() => setShowMusic(false)}
-      onEsc={() => setShowMusic(false)}
+      onClickOutside={() => header.setShowMusic(false)}
+      onEsc={() => header.setShowMusic(false)}
     >
       <Box>
         <Button
           icon={<Close />}
-          onClick={() => setShowMusic(false)}
+          onClick={() => header.setShowMusic(false)}
         />
       </Box>
     </Layer>
