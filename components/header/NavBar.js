@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { Button, Header } from 'grommet'
 import { Menu, Music } from 'grommet-icons'
-import MusicLayer from './MusicLayer'
-import NavBarMenu from './NavBarMenu'
 import LogoIcon from '../../assets/LogoIcon'
 import { useHeaderContext } from '../../context/header'
 
@@ -24,19 +22,11 @@ const NavBar = () => {
         onClick={() => header.setShowMenu(true)}
       />
       <LogoIcon size="large" />
-      {!header.state.showmenu && (
-        <Button
-          a11yTitle="Open Music Players"
-          icon={<Music />}
-          onClick={() => header.setShowMusic(true)}
-        />
-      )}
-      {header.state.showmenu && (
-        <NavBarMenu />
-      )}
-      {header.state.showmusic && (
-        <MusicLayer />
-      )}
+      <Button
+        a11yTitle="Open Music Players"
+        icon={<Music />}
+        onClick={() => header.setShowMusic(true)}
+      />
     </Header>
   )
 }

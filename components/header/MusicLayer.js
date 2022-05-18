@@ -6,17 +6,21 @@ const MusicLayer = () => {
   const header = useHeaderContext()
 
   return (
-    <Layer
-      onClickOutside={() => header.setShowMusic(false)}
-      onEsc={() => header.setShowMusic(false)}
-    >
-      <Box>
-        <Button
-          icon={<Close />}
-          onClick={() => header.setShowMusic(false)}
-        />
-      </Box>
-    </Layer>
+    <Box>
+      {header.state.showmusic && (
+        <Layer
+          onClickOutside={() => header.setShowMusic(false)}
+          onEsc={() => header.setShowMusic(false)}
+        >
+          <Box>
+            <Button
+              icon={<Close />}
+              onClick={() => header.setShowMusic(false)}
+            />
+          </Box>
+        </Layer>
+      )}
+    </Box>
   )
 }
 

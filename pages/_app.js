@@ -1,7 +1,9 @@
 import App from 'next/app'
 import { Grommet, Main } from 'grommet'
 import carbide from '../theme/carbide'
+import MusicLayer from '../components/header/MusicLayer'
 import NavBar from '../components/header/NavBar'
+import NavBarMenu from '../components/header//NavBarMenu'
 import PageFooter from '../components/footer/PageFooter'
 import { HeaderProvider } from '../context/header'
 
@@ -17,9 +19,11 @@ export default class MyApp extends App {
         <Main>
           <HeaderProvider>
             <NavBar />
-            <Component {...pageProps} />
-            <PageFooter />
+            <NavBarMenu />
+            <MusicLayer />
           </HeaderProvider>
+          <Component {...pageProps} />
+          <PageFooter />
         </Main>
       </Grommet>
     )

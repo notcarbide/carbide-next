@@ -31,16 +31,20 @@ const NavBarMenu = () => {
   const header = useHeaderContext()
 
   return (
-    <Layer
-      full="vertical"
-      position="start"
-      background="dark-1"
-      responsive={false}
-      onClickOutside={() => header.setShowMenu(false)}
-    >
-      <MenuButton label="Home" href="/" />
-      <MenuButton label="About" />
-    </Layer>
+    <Box>
+      {header.state.showmenu && (
+        <Layer
+          full="vertical"
+          position="start"
+          background="dark-1"
+          responsive={false}
+          onClickOutside={() => header.setShowMenu(false)}
+        >
+          <MenuButton label="Home" href="/" />
+          <MenuButton label="About" />
+        </Layer>
+      )}
+    </Box>
   )
 }
 
