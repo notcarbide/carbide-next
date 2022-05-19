@@ -4,7 +4,13 @@ import { Facebook, Github, Instagram, Spotify,
 
 const PageFooter = () => {
   return (
-    <Footer alignSelf="center">
+    <Footer
+      alignSelf="center"
+      pad={{
+        top: "medium",
+        bottom: "small",
+      }}
+    >
       <Button
         icon={<Spotify color="brand" />}
         href="https://open.spotify.com/artist/46FMfS2QJiBsbD42BYviN0"

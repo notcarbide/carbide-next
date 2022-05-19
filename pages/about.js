@@ -7,7 +7,6 @@ export default function About() {
       width="large"
       pad={{
         top: "small",
-        bottom: "small",
         left: "medium",
         right: "medium",
       }}

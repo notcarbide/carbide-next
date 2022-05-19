@@ -9,11 +9,7 @@ export default function Home() {
       margin="small"
     >
       <Heading>C A R B I D E</Heading>
-      <Box
-        pad={{
-          bottom: "medium"
-        }}
-      >
+      <Box>
         <Image
           alt="Main Carbide Image"
           src={main}
