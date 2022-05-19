@@ -36,12 +36,15 @@ const NavBarMenu = () => {
         <Layer
           full="vertical"
           position="start"
-          background="dark-1"
+          background="#000"
           responsive={false}
           onClickOutside={() => header.setShowMenu(false)}
         >
           <MenuButton label="Home" href="/" />
           <MenuButton label="About" href="/about" />
+          <MenuButton label="Media" href="/media" />
+          <MenuButton label="Shows" href="/shows" />
+          <MenuButton label="Contact" href="/contact" />
         </Layer>
       )}
     </Box>
