@@ -1,5 +1,5 @@
 import App from 'next/app'
-import { Grommet, Main } from 'grommet'
+import { Box, Grommet, Main } from 'grommet'
 import carbide from '../theme/carbide'
 import MusicLayer from '../components/header/MusicLayer'
 import NavBar from '../components/header/NavBar'
@@ -22,7 +22,9 @@ export default class MyApp extends App {
             <NavBarMenu />
             <MusicLayer />
           </HeaderProvider>
-          <Component {...pageProps} />
+          <Box fill>
+            <Component {...pageProps} />
+          </Box>
           <PageFooter />
         </Main>
       </Grommet>

@@ -41,7 +41,7 @@ const NavBarMenu = () => {
           onClickOutside={() => header.setShowMenu(false)}
         >
           <MenuButton label="Home" href="/" />
-          <MenuButton label="About" />
+          <MenuButton label="About" href="/about" />
         </Layer>
       )}
     </Box>
