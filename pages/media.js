@@ -1,6 +1,5 @@
 import { Anchor, Box, Heading, Text } from 'grommet'
 import YouTube from '../components/common/YouTube'
-import Iframe from '../components/common/Iframe'
 
 export default function About() {
   return (

@@ -23,9 +23,13 @@ const NavBar = () => {
       />
       <LogoIcon size="large" />
       <Button
-        a11yTitle="Open Music Players"
-        icon={<Music />}
-        onClick={() => header.setShowMusic(true)}
+        a11yTitle="Latest Music from Carbide"
+        icon={
+          <Music
+            color={header.state.showmusic && "brand"}
+          />
+        }
+        onClick={() => header.setShowMusic(!header.state.showmusic)}
       />
     </Header>
   )
