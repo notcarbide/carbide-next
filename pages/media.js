@@ -1,6 +1,6 @@
-import { Anchor, Box, Heading, Text } from 'grommet'
-import TitleText from '../components/common/TitleText'
-import YouTube from '../components/common/YouTube'
+import { Box, Heading, Tab, Tabs } from 'grommet'
+import Music from '../components/media/Music'
+import Videos from '../components/media/Videos'
 
 export default function Media() {
   return (
@@ -16,15 +16,14 @@ export default function Media() {
       <Box>
         <Heading>Media</Heading>
       </Box>
-      <TitleText>Radolescents Back To School Tour 2019-2020</TitleText>
-      <Box align="center">
-        <YouTube id="0Gh6jZ3TtEo" />
-        <YouTube id="pV3i41YGgqs" />
-      </Box>
-      <TitleText>For$aken Profits Tour 2020</TitleText>
-      <Box align="center">
-        <YouTube id="uOELS3_sIKc" />
-      </Box>
+      <Tabs>
+        <Tab title="Videos">
+          <Videos />
+        </Tab>
+        <Tab title="Music">
+          <Music />
+        </Tab>
+      </Tabs>
     </Box>
   )
 }

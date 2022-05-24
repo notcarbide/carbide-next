@@ -10,6 +10,15 @@ const carbide = deepMerge(grommet, {
       brand: '#75b1f2',
     },
   },
+  tab: {
+    color: "text",
+    border: {
+      active: {
+        color: "brand",
+      },
+      color: "text",
+    },
+  },
 })
 
 export default carbide;
