@@ -43,8 +43,10 @@ const NavBarMenu = () => {
           <MenuButton label="Home" href="/" />
           <MenuButton label="About" href="/about" />
           <MenuButton label="Media" href="/media" />
-          <MenuButton label="Shows" href="/shows" />
-          <MenuButton label="Contact" href="/contact" />
+          <MenuButton
+            label="Contact"
+            href="mailto:bookus.carbide@gmail.com"
+          />
         </Layer>
       )}
     </Box>
