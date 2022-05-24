@@ -11,6 +11,7 @@ export default function Media() {
         top: "small",
         left: "medium",
         right: "medium",
+        bottom: "medium",
       }}
     >
       <Box>

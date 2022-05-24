@@ -6,7 +6,12 @@ export default function Home() {
   return (
     <Box
       align="center"
-      margin="small"
+      margin={{
+        top: "small",
+        left: "medium",
+        right: "medium",
+        bottom: "medium",
+      }}
     >
       <Heading>C A R B I D E</Heading>
       <Box>

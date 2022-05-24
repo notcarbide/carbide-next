@@ -6,7 +6,7 @@ export default function About() {
       alignSelf="center"
       width="large"
       pad={{
-        top: "small",
+        top: "medium",
         left: "medium",
         right: "medium",
       }}
