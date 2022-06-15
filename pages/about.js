@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import { Anchor, Box, Heading, Paragraph } from 'grommet'
+import about from '../assets/about.png'
 
 export default function About() {
   return (
@@ -13,6 +15,14 @@ export default function About() {
     >
       <Box>
         <Heading>About</Heading>
+      </Box>
+      <Box align="center">
+      <Image
+        layout="fixed"
+        height="195px"
+        width="425px"
+        src={about}
+      />
       </Box>
       <Box>
         <Paragraph fill>
